@@ -41,7 +41,7 @@ namespace PrimeiraAplicacao.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            ModelState.AddModelError("", "The user name or password provided is incorrect.");
+            ModelState.AddModelError("", "O nome de usuario ou a senha informados estão incorretos.");
             return View(model);
         }
 
