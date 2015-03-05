@@ -39,10 +39,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -113,6 +121,37 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CidadeMetadado.cs" />
+    <Compile Include="Models\Cidades.cs">
+      <DependentUpon>ModeloDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Especialidades.cs">
+      <DependentUpon>ModeloDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EspecialidadeMetadado.cs" />
+    <Compile Include="Models\MedicoMetadado.cs" />
+    <Compile Include="Models\Medicos.cs">
+      <DependentUpon>ModeloDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModeloDeDados.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloDeDados.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModeloDeDados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModeloDeDados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloDeDados.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioMetadado.cs" />
+    <Compile Include="Models\Usuarios.cs">
+      <DependentUpon>ModeloDeDados.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +170,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <EntityDeploy Include="Models\ModeloDeDados.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloDeDados.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModeloDeDados.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloDeDados.edmx</DependentUpon>
+      <LastGenOutput>ModeloDeDados.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModeloDeDados.edmx.diagram">
+      <DependentUpon>ModeloDeDados.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ModeloDeDados.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloDeDados.edmx</DependentUpon>
+      <LastGenOutput>ModeloDeDados.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -153,10 +209,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
