@@ -25,6 +25,13 @@ namespace AplicacaoComCodeFirst.Models
         [ForeignKey("CategoriaID")]
         public virtual Categorias Categorias { get; set; }
 
+        [InverseProperty("Posts")]
+        public virtual ICollection<Tags> Tags { get; set; }
+
+        public Posts()
+        {
+            Tags = new HashSet<Tags>();
+        }
 
     }
 }

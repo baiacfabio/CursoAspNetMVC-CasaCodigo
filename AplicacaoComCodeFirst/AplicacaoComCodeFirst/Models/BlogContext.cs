@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Runtime.ConstrainedExecution;
 
 namespace AplicacaoComCodeFirst.Models
 {
@@ -8,5 +9,8 @@ namespace AplicacaoComCodeFirst.Models
         public DbSet<Posts> Posts { get; set; }
 
         public DbSet<Categorias> Categorias { get; set; }
+
+        public DbSet<Tags> Tags { get; set; }
+
     }
 }
