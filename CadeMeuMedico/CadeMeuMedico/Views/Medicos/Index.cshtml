@@ -12,31 +12,7 @@
 <table>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.IDMedico)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CRM)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Endereco)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Bairro)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AtendePorConvenio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TemClinica)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WebsiteBlog)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.IDCidade)
@@ -50,37 +26,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.IDMedico)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CRM)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Nome)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Endereco)
+            @Html.DisplayFor(modelItem => item.Cidades.Nome)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Bairro)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AtendePorConvenio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TemClinica)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WebsiteBlog)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IDCidade)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IDEspecialidade)
+            @Html.DisplayFor(modelItem => item.Especialidades.Nome)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
