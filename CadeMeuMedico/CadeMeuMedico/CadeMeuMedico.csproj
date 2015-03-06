@@ -209,6 +209,7 @@
     <Content Include="Views\TesteLayout\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Medicos\Index.cshtml" />
+    <Content Include="Views\Medicos\Adicionar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
