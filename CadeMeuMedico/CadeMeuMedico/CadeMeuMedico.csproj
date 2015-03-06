@@ -116,6 +116,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CidadesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MedicosController.cs" />
     <Compile Include="Controllers\MensagensController.cs" />
@@ -211,6 +212,9 @@
     <Content Include="Views\Medicos\Index.cshtml" />
     <Content Include="Views\Medicos\Adicionar.cshtml" />
     <Content Include="Views\Medicos\Editar.cshtml" />
+    <Content Include="Views\Cidades\Index.cshtml" />
+    <Content Include="Views\Cidades\Adicionar.cshtml" />
+    <Content Include="Views\Cidades\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
