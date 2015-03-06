@@ -89,5 +89,12 @@ namespace CadeMeuMedico.Controllers
                 return Boolean.FalseString;
             }
         }
+
+        public ActionResult Detalhes(long id)
+        {
+            Medicos medico = db.Medicos.Find(id);
+
+            return View(medico);
+        }
     }
 }
