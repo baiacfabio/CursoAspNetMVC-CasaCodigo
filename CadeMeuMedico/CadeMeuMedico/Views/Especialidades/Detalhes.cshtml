@@ -1,0 +1,29 @@
+﻿@model CadeMeuMedico.Models.Especialidades
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<fieldset>
+    <legend>Especialidades</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IDEspecialidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IDEspecialidade)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id=Model.IDEspecialidade }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
