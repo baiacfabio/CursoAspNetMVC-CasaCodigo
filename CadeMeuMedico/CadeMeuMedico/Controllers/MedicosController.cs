@@ -74,5 +74,20 @@ namespace CadeMeuMedico.Controllers
             return View(medico);
         }
 
+        public string Excluir(long id)
+        {
+            try
+            {
+                Medicos medico = db.Medicos.Find(id);
+                db.Medicos.Remove(medico);
+                db.SaveChanges();
+
+                return Boolean.TrueString;
+            }
+            catch (Exception)
+            {
+                return Boolean.FalseString;
+            }
+        }
     }
 }
