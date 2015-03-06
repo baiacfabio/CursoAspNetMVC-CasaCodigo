@@ -219,6 +219,9 @@
     <Content Include="Views\Especialidades\Index.cshtml" />
     <Content Include="Views\Especialidades\Adicionar.cshtml" />
     <Content Include="Views\Especialidades\Editar.cshtml" />
+    <Content Include="Views\Cidades\Detalhes.cshtml" />
+    <Content Include="Views\Especialidades\Detalhes.cshtml" />
+    <Content Include="Views\Medicos\Detalhes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using CadeMeuMedico.Models;
 
 namespace CadeMeuMedico.Controllers
@@ -72,6 +73,13 @@ namespace CadeMeuMedico.Controllers
             {
                 return Boolean.FalseString;
             }
+        }
+
+        public ActionResult Detalhes(long id)
+        {
+            Cidades cidade = db.Cidades.Find(id);
+
+            return View(cidade);
         }
 
     }

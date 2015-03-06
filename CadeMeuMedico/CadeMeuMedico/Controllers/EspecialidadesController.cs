@@ -74,5 +74,12 @@ namespace CadeMeuMedico.Controllers
             }
         }
 
+        public ActionResult Detalhes(long id)
+        {
+            Especialidades especialidade = db.Especialidades.Find(id);
+
+            return View(especialidade);
+        }
+
     }
 }
